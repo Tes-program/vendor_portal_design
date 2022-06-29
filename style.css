@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap');
 *,
 *::before
 *::after {
@@ -23,7 +23,7 @@ body {
     color: white;
     font-weight: bold;
     font-size: 1.1rem;
-    padding: 3px;
+    padding: 6px;
 }
 .topbar-item a {
     color: white;
@@ -33,7 +33,7 @@ body {
     margin-left: 1.6rem;
 }
 .topbar-item:nth-child(2) {
-    margin-right: 58rem;
+    margin-right: 56rem;
 }
 .material-icons {
     color: white;
@@ -47,22 +47,44 @@ button {
     border-top: 0;
     border-bottom: 0;
     border-right: 0;
-    height: min-content;
+    height: fit-content;
 }
 .seconditem {
+    display: flex;
+    justify-content: space-between;
     background-color: #09A8C5;
-    display: grid;
-    grid-template-columns: repeat(6, 240px);
     margin: 0;
-    list-style-type: none;
-    gap: 0px;
+    padding-inline-end: 40px;
 }
 .seconditem-list {
     list-style-type: none;
     text-transform: uppercase;
-    font-family: Inter;
-    font-weight: 600;
-    font-size: 15px;
-    padding: 8px;
     color: white;
+    font-weight: bolder;
+    padding: 9px;
+    font-size: 14px;
+}
+h3 {
+    margin-top: 0.5rem;
+    margin-left: 1rem;
+    font-weight: bolder;
+    margin-bottom: 0.5rem;
+}
+.boxes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 13px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.boxes-item {
+    width: 190px;
+    border-radius: 13px;
+    height: 103px;
+}
+.boxes-item:nth-child(5) {
+    background: white;
+    border-radius: 13px;
+    box-shadow: 5px 5px 3px grey;
+    width: 480px;
 }
