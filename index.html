@@ -4,11 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
       <link href="https://fonts.googleapis.com/icon?family=Material+Font"
       rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/chart.js@3.8.0"></script>
     <title>Vendor Portal</title>
 </head>
 <body>
@@ -65,18 +69,98 @@
     <h3>
         Activity Cues
     </h3>
+  <div class="wrapper">
     <div class="boxes">
-        <div class="boxes-item" style="background-color: rgba(9, 168, 197, 0.3);"></div>
-        <div class="boxes-item" style="background-color: rgba(243, 170, 24, 0.3);"></div>
-        <div class="boxes-item" style="background-color: rgba(91, 211, 102, 0.3);"></div>
-        <div class="boxes-item" style="background-color: rgba(234, 61, 47, 0.3);"></div>
-        <div class="boxes-item"></div>
-        <div class="boxes-item" style="background-color: rgba(9, 168, 197, 0.3);"></div>
-        <div class="boxes-item" style="background-color: rgba(243, 170, 24, 0.3);"></div>
-        <div class="boxes-item" style="background-color: rgba(91, 211, 102, 0.3);"></div>
-        <div class="boxes-item" id="boxes-span" style="background-color: rgba(234, 61, 47, 0.3); "></div>
+        <div class="boxes-item" style="background-color: rgba(9, 168, 197, 0.3);">
+            <div class="box-content">
+                <i class="material-icons" id="edit-document">edit_document</i>
+            <h4 class="number-quote">54</h4>
+            </div>
+            <p class="box-text">Quotes</p>
+            
+        </div>
+        <div class="boxes-item" style="background-color: rgba(243, 170, 24, 0.3);">
+            <div class="box-content">
+                <i class="material-icons" id="edit-document">warning</i>
+            <h4 class="number-quote">54</h4>
+            </div>
+            <p class="box-text">Pending Quotes</p>
+        
+        </div>
+        <div class="boxes-item" style="background-color: rgba(91, 211, 102, 0.3);">
+            <div class="box-content">
+                <i class="material-icons" id="edit-document">check_circle</i>
+            <h4 class="number-quote">54</h4>
+            </div>
+            <p class="box-text">Approved Quotes</p>
+            
+        
+        </div>
+        <div class="boxes-item" style="background-color: rgba(234, 61, 47, 0.3);">
+            <div class="box-content">
+                <i class="material-icons" id="edit-document">cancel</i>
+            <h4 class="number-quote">54</h4>
+            </div>
+            <p class="box-text">Rejected Quotes</p>
+        </div>
+        <div class="boxes-item" style="background-color: rgba(9, 168, 197, 0.3);">
+            <div class="box-content">
+                <i class="material-icons" id="edit-document">folder</i>
+            <h4 class="number-quote">54</h4>
+            </div>
+            <p class="box-text">Purchase Orders</p>
+            </div>
+        <div class="boxes-item" style="background-color: rgba(243, 170, 24, 0.3);">
+        
+            <div class="box-content">
+                <i class="bx bxs-folder-open" id="edit-document"></i>
+            <h4 class="number-quote">54</h4>
+            </div>
+            <p class="box-text">Open Purchase Orders</p>
+            </div>
+        <div class="boxes-item" style="background-color: rgba(91, 211, 102, 0.3);">
+            <div class="box-content">
+                <i class="material-icons" id="edit-document"><svg width="29" height="25" viewBox="0 0 29 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.9062 4.4375L0.9787 6.01437C0.500501 6.70955 0.281155 7.55038 0.358825 8.39056L1.51339 21.0781C1.59523 21.9787 2.01078 22.8163 2.67846 23.4263C3.34613 24.0362 4.21771 24.3746 5.12208 24.375H16.3125V22.5625H5.12208C4.6699 22.5621 4.23422 22.3926 3.90055 22.0875C3.56689 21.7823 3.35933 21.3635 3.31864 20.9131L2.16408 8.22563C2.14141 7.97487 2.17125 7.72213 2.25167 7.48354C2.3321 7.24495 2.46135 7.02573 2.63119 6.83986C2.80103 6.65399 3.00774 6.50555 3.23813 6.40399C3.46852 6.30243 3.71754 6.24999 3.96933 6.25H25.0306C25.2824 6.24999 25.5314 6.30243 25.7618 6.40399C25.9922 6.50555 26.1989 6.65399 26.3687 6.83986C26.5385 7.02573 26.6678 7.24495 26.7482 7.48354C26.8287 7.72213 26.8585 7.97487 26.8358 8.22563L26.3537 13.5H28.1753L28.6393 8.39056C28.6848 7.88905 28.6254 7.38355 28.4648 6.90627C28.3042 6.42899 28.0459 5.99042 27.7064 5.61851C27.3668 5.24659 26.9536 4.9495 26.4929 4.74616C26.0322 4.54282 25.5342 4.4377 25.0306 4.4375H17.8132C16.8519 4.43729 15.93 4.05524 15.2503 3.37538L13.7496 1.87462C13.0699 1.19476 12.148 0.812705 11.1867 0.8125H4.5312C3.56979 0.8125 2.64776 1.19442 1.96794 1.87424C1.28812 2.55406 0.9062 3.47609 0.9062 4.4375V4.4375ZM11.1867 2.625C11.6674 2.6251 12.1283 2.81613 12.4681 3.15606L13.7496 4.4375H3.96933C3.53433 4.4375 3.11745 4.51362 2.73139 4.655L2.7187 4.40125C2.72819 3.92686 2.92333 3.4751 3.26222 3.14299C3.6011 2.81088 4.05671 2.62491 4.5312 2.625H11.1867V2.625Z" fill="#282A29"/>
+                    <path d="M28.7352 17.3893C28.8196 17.4735 28.8866 17.5735 28.9323 17.6836C28.9779 17.7937 29.0015 17.9117 29.0015 18.0309C29.0015 18.1501 28.9779 18.2682 28.9323 18.3783C28.8866 18.4884 28.8196 18.5884 28.7352 18.6725L23.2977 24.11C23.1278 24.2799 22.8973 24.3754 22.657 24.3754C22.4167 24.3754 22.1862 24.2799 22.0163 24.11L19.2975 21.3913C19.1274 21.2214 19.0317 20.9908 19.0315 20.7503C19.0313 20.5098 19.1267 20.2791 19.2966 20.1089C19.4666 19.9388 19.6971 19.8431 19.9376 19.8429C20.1781 19.8427 20.4088 19.9381 20.579 20.108L22.6561 22.187L27.452 17.3893C27.5361 17.3049 27.6362 17.2379 27.7463 17.1923C27.8564 17.1466 27.9744 17.123 28.0936 17.123C28.2128 17.123 28.3308 17.1466 28.4409 17.1923C28.551 17.2379 28.651 17.3049 28.7352 17.3893V17.3893Z" fill="#282A29"/>
+                    </svg>
+                    </i>
+            <h4 class="number-quote">54</h4>
+            </div>
+            <p class="box-text">Accepted Purchase Orders</p>
+            </div>
+        <div class="boxes-item" id="boxes-span" style="background-color: rgba(234, 61, 47, 0.3); ">
+            <div class="box-content">
+                <i class="material-icons" id="edit-document"><svg width="29" height="25" viewBox="0 0 29 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.978797 6.01437L0.906297 4.4375C0.906297 3.47609 1.28822 2.55406 1.96803 1.87424C2.64785 1.19442 3.56989 0.8125 4.5313 0.8125H11.1868C12.1481 0.812705 13.07 1.19476 13.7497 1.87462L15.2504 3.37538C15.9301 4.05524 16.852 4.43729 17.8133 4.4375H25.0307C25.5344 4.43745 26.0326 4.54238 26.4935 4.74561C26.9544 4.94884 27.3679 5.24589 27.7077 5.61784C28.0474 5.98978 28.3058 6.42844 28.4666 6.90584C28.6273 7.38324 28.6868 7.8889 28.6412 8.39056L28.1772 13.5H26.3538L26.8341 8.22563C26.8568 7.97502 26.827 7.72244 26.7467 7.48397C26.6663 7.24551 26.5372 7.02637 26.3676 6.84053C26.198 6.65469 25.9915 6.50621 25.7613 6.40454C25.5311 6.30287 25.2823 6.25024 25.0307 6.25H3.96942C3.71764 6.24999 3.46862 6.30243 3.23823 6.40399C3.00784 6.50555 2.80113 6.65399 2.63129 6.83986C2.46145 7.02573 2.3322 7.24495 2.25177 7.48354C2.17135 7.72213 2.14151 7.97487 2.16417 8.22563L3.31873 20.9131C3.35943 21.3635 3.56698 21.7823 3.90065 22.0875C4.23432 22.3927 4.67 22.5621 5.12217 22.5625H16.3125V24.375H5.12217C4.2178 24.3746 3.34623 24.0362 2.67855 23.4263C2.01088 22.8163 1.59533 21.9787 1.51348 21.0781L0.358922 8.39056C0.281685 7.55098 0.501011 6.71087 0.978797 6.01619V6.01437ZM12.4682 3.15606C12.1284 2.81613 11.6675 2.6251 11.1868 2.625H4.5313C4.0565 2.62491 3.60063 2.81114 3.26169 3.14364C2.92275 3.47613 2.72782 3.92835 2.7188 4.40306L2.72967 4.655C3.11755 4.51362 3.53442 4.4375 3.96942 4.4375H13.7497L12.4682 3.15606Z" fill="#282A29"/>
+                    <path d="M21.4855 17.3892C21.3153 17.2192 21.0846 17.1239 20.8441 17.124C20.6036 17.1242 20.373 17.2199 20.2031 17.3901C20.0332 17.5602 19.9378 17.7909 19.938 18.0314C19.9382 18.2719 20.0339 18.5025 20.204 18.6724L22.2811 20.7495L20.204 22.8267C20.1198 22.9108 20.0529 23.0107 20.0073 23.1207C19.9616 23.2307 19.9381 23.3486 19.938 23.4676C19.9378 23.7081 20.0332 23.9388 20.2031 24.109C20.373 24.2792 20.6036 24.3749 20.8441 24.375C21.0846 24.3752 21.3153 24.2798 21.4855 24.1099L23.5626 22.031L25.6397 24.1099C25.8099 24.2801 26.0407 24.3757 26.2813 24.3757C26.522 24.3757 26.7528 24.2801 26.923 24.1099C27.0931 23.9397 27.1887 23.7089 27.1887 23.4683C27.1887 23.2276 27.0931 22.9968 26.923 22.8267L24.844 20.7495L26.923 18.6724C27.0931 18.5025 27.1888 18.2719 27.189 18.0314C27.1892 17.7909 27.0938 17.5602 26.9239 17.3901C26.7539 17.2199 26.5234 17.1242 26.2829 17.124C26.0424 17.1239 25.8117 17.2192 25.6415 17.3892L23.5626 19.4681L21.4855 17.3892Z" fill="#282A29"/>
+                    </svg>
+                    </i>
+            <h4 class="number-quote">54</h4>
+            </div>
+            <p class="box-text">Closed Purchase Orders</p>
+            </div>
     </div>
-
+    <div class="large-box">
+        <div class="large-box-title">
+            <i class="material-icons" id="large-box-item">sms</i>
+            <p class="large-box-text">vendor portal <li class="list-title">now</li></p>
+        </div>
+        <div class="large-box-bodytext">
+            <h2 class="large-box-header">New Notifications</h2>
+            <p class="large-box-contentext">Do ullamco ex velit anim do proident exercitation et anim tempor. Lorem sunt deserunt labore non excepteur veniam enim quis officia magna anim... Do ullamco ex velit anim do proident exercitation et anim tempor. Lorem sunt deserunt labore non excepteur veniam enim quis officia magna anim... </p>
+        </div>        
+    </div>
+   </div>
+   <h3>Supplier Compliance Stats</h3>
+   <div class="all-doughtnut-charts">
+    <canvas class="chartDoughnut" id="myChart1" width="400" height="500"></canvas>
+    <canvas class="chartDoughnut" id="myChart2"></canvas>
+    <canvas class="chartDoughnut" id="myChart3" ></canvas>
+    <canvas class="chartDoughnut" id="myChart4" "></canvas>
+    <canvas class="chartDoughnut" id="myChart5" ></canvas>
+    </div>
+<h3>Recent Activity</h3>
 </body>
 <script src="script.js"></script>
 </html>
